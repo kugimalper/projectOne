@@ -52,6 +52,7 @@ class ViewController: UIViewController {
         } else {
             alertForCharacterControl.isHidden = false
         }
+        nameEnterTextField.text = ""
     }
     override func viewDidLoad() {
         super.viewDidLoad()
