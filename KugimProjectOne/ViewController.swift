@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     
+    @IBOutlet weak var nameList: UILabel!
     @IBAction func clearButton() {
     }
     @IBAction func addNameButton() {
