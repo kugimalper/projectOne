@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var names : String = ""
-    var namesArray : Array <String> = []
+    var namesArray = [String]()
     
     
     @IBOutlet weak var alertForCharacterControl: UILabel!
@@ -27,6 +27,11 @@ class ViewController: UIViewController {
             names = nameEnterTextField.text!
             namesArray.append(names)
             print (namesArray)
+            names = ""
+            for i in namesArray {
+                names += "\n" + i
+            }
+            nameList.text = names
             
         } else {
             alertForCharacterControl.isHidden = false
