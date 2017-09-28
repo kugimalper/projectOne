@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var names : String = ""
+    var namesArray : Array <String> = []
+    
+    
     @IBOutlet weak var alertForCharacterControl: UILabel!
     @IBOutlet weak var nameEnterTextField: UITextField!
     @IBOutlet weak var nameList: UILabel!
+    
     @IBAction func clearButton() {
     }
     @IBAction func addNameButton() {
