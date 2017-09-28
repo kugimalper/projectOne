@@ -19,6 +19,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameList: UILabel!
     
     @IBAction func clearButton() {
+        
+        names = nameEnterTextField.text!
+        
+        if namesArray.count != 0 {
+            namesArray.removeLast()
+            names = ""
+            for i in namesArray {
+                names += "\n" + i
+            }
+            nameList.text = names
+            
+        } else {
+            alertForCharacterControl.isHidden = false
+            alertForCharacterControl.text = "Silinecek isim bulunamadı!"
+        }
+        
     }
     @IBAction func addNameButton() {
         
