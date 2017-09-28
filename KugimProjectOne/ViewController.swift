@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  
+    @IBAction func addNameButton() {
+    }
     @IBOutlet weak var nameEnterTextBox: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
