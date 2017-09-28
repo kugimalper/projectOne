@@ -21,13 +21,24 @@ class ViewController: UIViewController {
     @IBAction func clearButton() {
     }
     @IBAction func addNameButton() {
+        
+        if (nameEnterTextField.text?.characters.count)! >= 5 {
+            
+            names = nameEnterTextField.text!
+            namesArray.append(names)
+            print (namesArray)
+            
+        } else {
+            alertForCharacterControl.isHidden = false
+        }
     }
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         alertForCharacterControl.isHidden = true
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
