@@ -10,13 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var nameEnterTextField: UITextField!
     
     @IBOutlet weak var nameList: UILabel!
     @IBAction func clearButton() {
     }
     @IBAction func addNameButton() {
     }
-    @IBOutlet weak var nameEnterTextBox: UILabel!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
