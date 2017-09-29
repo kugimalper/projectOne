@@ -28,15 +28,21 @@ class ViewController: UIViewController {
         if namesArray.count != 0 {
             namesArray.removeLast()
             names = ""
+            
+            // every new item cleared from the list it will get numbered orderly
             for (key,value) in namesArray.enumerated() {
                 names += "\n"  + String(key + 1) + "-) " + value
             }
+            
+            // namelist color changed to red
             nameList.textColor = UIColor.red
             nameList.text = names
             
             
         } else {
             
+            
+            // alert pop - up created
             let alert = UIAlertController(title: "Alert", message: "There is no item that you can delete!", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
@@ -52,18 +58,22 @@ class ViewController: UIViewController {
             namesArray.append(names)
             print (namesArray)
             names = ""
+            
+            // every new item added to the list it will get numbered orderly
             for (key,value) in namesArray.enumerated() {
                 
                 names += "\n"  + String(key + 1) + "-) " + value
                 
             }
             nameList.text = names
+            
+            // namelist text color changed to blue
             nameList.textColor = UIColor.blue
             
             
         } else {
             
-            
+            // alert pop - up created 
             let alert = UIAlertController(title: "Alert", message: "The name that you entered is less than 5 charactes. Please enter the name again!", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
