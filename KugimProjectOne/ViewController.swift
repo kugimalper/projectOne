@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var namesArray = [String]()
     
     
-    @IBOutlet weak var alertForCharacterControl: UILabel!
+   
     @IBOutlet weak var nameEnterTextField: UITextField!
     @IBOutlet weak var nameList: UILabel!
     
@@ -33,8 +33,7 @@ class ViewController: UIViewController {
             nameList.text = names
             
         } else {
-            //alertForCharacterControl.isHidden = false
-            //alertForCharacterControl.text = "Silinecek isim bulunamadı!"
+          
             let alert = UIAlertController(title: "Alert", message: "There is no item that you can delete!", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
@@ -56,7 +55,7 @@ class ViewController: UIViewController {
             nameList.text = names
             
         } else {
-            //alertForCharacterControl.isHidden = false
+            
             
             let alert = UIAlertController(title: "Alert", message: "The name that you entered is less than 5 charactes. Please enter the name again!", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
@@ -72,7 +71,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        alertForCharacterControl.isHidden = true
+    
         
         
     }
