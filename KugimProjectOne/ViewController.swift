@@ -27,8 +27,8 @@ class ViewController: UIViewController {
         if namesArray.count != 0 {
             namesArray.removeLast()
             names = ""
-            for i in namesArray {
-                names += "\n" + i
+            for (key,value) in namesArray.enumerated() {
+                names += "\n"  + String(key + 1) + "-) " + value
             }
             nameList.text = names
             
@@ -49,8 +49,10 @@ class ViewController: UIViewController {
             namesArray.append(names)
             print (namesArray)
             names = ""
-            for i in namesArray {
-                names += "\n" + i
+            for (key,value) in namesArray.enumerated() {
+                
+                names += "\n"  + String(key + 1) + "-) " + value
+                
             }
             nameList.text = names
             
