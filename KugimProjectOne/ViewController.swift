@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
     
     var names : String = ""
@@ -31,12 +33,16 @@ class ViewController: UIViewController {
             nameList.text = names
             
         } else {
-            alertForCharacterControl.isHidden = false
-            alertForCharacterControl.text = "Silinecek isim bulunamadı!"
+            //alertForCharacterControl.isHidden = false
+            //alertForCharacterControl.text = "Silinecek isim bulunamadı!"
+            let alert = UIAlertController(title: "Alert", message: "There is no item that you can delete!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
         
     }
     @IBAction func addNameButton() {
+     
         
         if (nameEnterTextField.text?.characters.count)! >= 5 {
             
@@ -50,7 +56,15 @@ class ViewController: UIViewController {
             nameList.text = names
             
         } else {
-            alertForCharacterControl.isHidden = false
+            //alertForCharacterControl.isHidden = false
+            
+            let alert = UIAlertController(title: "Alert", message: "The name that you entered is less than 5 charactes. Please enter the name again!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+            
+            
+            
         }
         nameEnterTextField.text = ""
     }
