@@ -16,9 +16,10 @@ class ViewController: UIViewController {
     var namesArray = [String]()
     
     
-   
+    
     @IBOutlet weak var nameEnterTextField: UITextField!
     @IBOutlet weak var nameList: UILabel!
+    
     
     @IBAction func clearButton() {
         
@@ -30,10 +31,12 @@ class ViewController: UIViewController {
             for (key,value) in namesArray.enumerated() {
                 names += "\n"  + String(key + 1) + "-) " + value
             }
+            nameList.textColor = UIColor.red
             nameList.text = names
             
+            
         } else {
-          
+            
             let alert = UIAlertController(title: "Alert", message: "There is no item that you can delete!", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
@@ -41,7 +44,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func addNameButton() {
-     
+        
         
         if (nameEnterTextField.text?.characters.count)! >= 5 {
             
@@ -55,6 +58,8 @@ class ViewController: UIViewController {
                 
             }
             nameList.text = names
+            nameList.textColor = UIColor.blue
+            
             
         } else {
             
@@ -73,7 +78,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-    
+        
         
         
     }
